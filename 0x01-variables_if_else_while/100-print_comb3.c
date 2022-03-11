@@ -11,16 +11,18 @@ int main(void)
 {
 	int x, y;
 
-	for (x = 0; x <= 9; x++)
+	for (x = 0; x <= 10; x++)
 	{
-		for (y = x + 1; y <= 10; y++)
+		for (y = x + 1; y <= 9; y++)
 		{
-			putchar((x % 10) + '0');
-			putchar((y % 10) + '0');
-
-			if (x == 8 && y == 9)
+			if (x == y)
 				continue;
 
+			if (x == 9 && y == 8)
+				continue;
+
+			putchar((x % 10) + '0');
+			putchar((y % 10) + '0');
 			putchar(',');
 			putchar(' ');
 		}
