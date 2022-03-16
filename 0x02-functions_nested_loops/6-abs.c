@@ -2,12 +2,16 @@
 
 /**
  * _abs - computes absolute value of an integer
- *@x : input
- * Return: 0
+ * @x: integer
+ *Return: 0
  */
-int _abs(int)
+int _abs(int x)
 {
-	int n;
 
-	return (abs(n));
+	if (x < 0)
+	{
+		return (x * -1);
+	}
+
+	return (x);
 }
