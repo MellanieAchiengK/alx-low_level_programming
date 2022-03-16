@@ -7,40 +7,37 @@
  */
 void times_table(void)
 {
-	int a = 0;
-	int mult;                 /* mult represents multiplied figure */
+	int a, b, mult;          /* mult represents multiplied figure */
 
-	while (a <= 9)
+	for (a = 0; a <= 9; a++)
 	{
-		int b = 0;
+		for (b = 0; b <= 9; b++)
 
-		while (b <= 9);
 		{
 			mult = a * b;
-
 			if (b == 0)
 			{
-				_putchar('0' + mult);
+				_putchar(mult + '0');
 			}
-			else if (mult < 10)
+			else if (mult >= 10)
 			{
 				_putchar(' ');
-				_putchar('0' + mult);
+				_putchar(mult / 10 + '0');
+				_putchar(mult % 10 + '0');
 			}
 			else
 			{
-				_putchar('0' + mult / 10);
-				_putchar('0' + mult % 10);
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(mult + '0');
+
 			}
 
-			if (b < 9)
+			if (b != 9)
 			{
 				_putchar(',');
-				_putchar(' ');
 			}
-			b++;
 		}
 		_putchar('\n');
-		a++;
 	}
 }
