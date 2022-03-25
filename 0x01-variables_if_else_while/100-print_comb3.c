@@ -23,10 +23,11 @@ int main(void)
 
 			putchar((x % 10) + '0');
 			putchar((y % 10) + '0');
-
 			if (x + y != 17)
-			putchar(',');
-			putchar(' ');
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 
