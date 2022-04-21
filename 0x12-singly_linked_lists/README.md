@@ -1,0 +1,4 @@
+This Project aims to help students understand;
+
+When and why using linked lists vs arrays
+How to build and use linked lists
